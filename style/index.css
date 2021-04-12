@@ -46,7 +46,7 @@ table {
 /* reset above */
 
 *{
-    /* border: 1px solid red; */
+    border: 1px solid red;
     box-sizing: border-box;
     font-family: 'Oswald', sans-serif;
 }
@@ -122,6 +122,11 @@ a:hover{
      margin-left:1%;
     width:100%;
 }
+
+.upperBodyLeft img:hover{
+    /* filter:hue-rotate(75deg); */
+}
+
 .upperBodyLeft {
     width:55%;
     }
@@ -149,20 +154,28 @@ p{
     letter-spacing: 1px;
 }
 
-.midBody div{
+.gallery{
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 1%;
 }
 
+.gallery div{
+    display:flex;
+    flex-direction: column;
+    width: 22%
+}
+
 .midBody img{
-    width:22%; 
-    margin-bottom: .5%;  
+    width:100%; 
+    margin-top: 1%;
+
 }
 .midBody p{
-    width: 22%;
-    margin-bottom: 3%;
+    width: 100%;
+
+    margin: 3% 0;
     text-align:center;
 }
 
@@ -193,4 +206,72 @@ footer img{
 
 footer a:last-child{
     background-color: transparent;
+}
+
+@media (max-width:800px){
+    .upperBodyLeft {
+        /* width:50%; */
+        /* background-image: url('chevron.png'); */
+        display:none;
+        }
+
+    .upperBodyRight{
+        width:100%;
+    }
+    .upperBody{
+        margin-bottom: 3%;
+        padding-bottom: 2%;
+        border-bottom: 1px dashed #4f4f4f
+    }
+    .linkedin{
+        width:25%;
+    }
+}
+
+@media (max-width:500px){
+    header h1{
+        text-align:center;
+    }
+    header nav div{
+        display:flex;
+        flex-flow: column;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+    header nav div a{
+        margin: .5% 0;
+        width: 35%;
+    }
+    .upperBodyLeft {
+        /* width:50%; */
+        /* background-image: url('chevron.png'); */
+        display:block;
+        width:80%;
+        margin: 0 auto;
+        
+        }
+    .upperBody{
+        display:flex;
+        flex-direction: column;
+        margin-bottom: 2%;
+        /* margin-top: .5%; */
+        justify-content:space-between;
+    }
+    .upperBodyRight p{
+        width: 75%;
+        padding-top: 2%;
+        text-align: center;
+    }
+    .gallery div{
+        display:flex;
+        flex-direction: column;
+        width: 45%;
+        justify-content: space-around;
+        margin: 4% 2%;
+    }
+    .linkedin, .linkedinlink{
+        display:none;
+    }
 }
